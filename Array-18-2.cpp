@@ -18,8 +18,8 @@ int findfun(int arr[],int n,int k)
 }
 int main()
 {
-    int n = 4, k = 2;
-    int arr[n]={1,1,1,1};
+    int n = 4, k = 6;
+    int arr[n]={1,5,7,1};
     int p=findfun(arr,n,k);
     cout<<p;
     return 0;
