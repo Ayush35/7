@@ -20,8 +20,8 @@ int updatebit(int n, int pos ,int value){
 }
 
 int main(void) {
-    cout<<getBit(7,4)<<endl;
-    cout<<setBit(5,1)<<endl;
-    cout<<clearbit(6,1)<<endl;
-    cout<<updatebit(5,1,1)<<endl;
+    cout<<getBit(4,2)<<endl;
+    // cout<<setBit(5,1)<<endl;
+    // cout<<clearbit(6,1)<<endl;
+    // cout<<updatebit(5,1,1)<<endl;
 }
