@@ -1,49 +1,31 @@
-#include <iostream>
+#include "bits/stdc++.h"
 using namespace std;
 
-int fmin(int arr[], int n,int start)
-{
-    int min = arr[0];
-    int idx = start;
-    for (int i = start+1; i < n; i++)
-    {
-        if (arr[i] < min)
-        {
-            min = arr[i];
-            idx =i ;
-        }
+int reversort(vector <int> &L){
+    int cost = 0; 
+    for(int i = 0; i <L.size()-1;i++){
+        int m = *min_element(L.begin()+i, L.end());
+        auto x = find(L.begin(), L.end() , m);
+        reverse(L.begin() +i , x+1);
+        cost += distance(L.begin(),x) - i +1;
     }
-    // cout<<idx<<endl;
-    return idx;
+    return cost;
 }
 
-
-void reversort(int arr[], int n)
-{
-    int k = 0;
-    for (int i = 0; i < n - 1; i++)
-    {
-        
-        int j = fmin(arr, n , i);
-        if(i == j){continue;}
-        int x = i;
-        while(x!=j && x<j){
-            int temp = arr[x];
-            arr[x] = arr[j];
-            arr[j] =temp;
-            x++;
-            j--;
-        }
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
-        cout << endl;
-    }
-}
 int main(void)
 {
-    int n = 7;
-    int arr[n] = {7, 6, 5, 4, 3, 2, 1};
-    reversort(arr, n);
+    int T ; 
+    cin>>T;
+    for(int c= 1 ; c< T+1 ; c++){
+        int N;
+        cin>>N;
+        vector <int> L;
+        for(int i=0 ; i<N; i++)
+        {
+            int num;
+            cin>>num;
+            L.push_back(num);
+        }
+        cout<<"Case #"<<c <<":"<<reversort(L)<<endl;
+    }
 }
