@@ -53,8 +53,8 @@ int mergeSort(int arr[],int l , int r){
 }
 
 int main(){
-    int n =8; 
-    int arr[n] = {6,3,9,5,2,8,7,1};
+    int n =8;
+    int arr[n] = {14,33,27,10,35,19,42,44};
     mergeSort(arr,0,n);
     for(int i = 0; i <n ; i++){cout<<arr[i]<<" ";}
     return 0;

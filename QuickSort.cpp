@@ -31,8 +31,8 @@ void quicksort(int arr[] , int l , int r){
 
 
 int main(void){
-    int n =8; 
-    int arr[n] = {6,3,9,5,2,8,7,1};
+    int n =6; 
+    int arr[n] = {50,23,9,18,61,32};
     quicksort(arr,0,n-1);
     for(int i = 0; i <n ; i++){cout<<arr[i]<<" ";}
 }
