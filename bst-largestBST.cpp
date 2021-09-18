@@ -19,7 +19,13 @@ struct info{
     int ans;
     bool isBST;
 };
-
+void inorder(struct Node* root){
+    if(root == NULL)
+        return;
+    inorder(root->left);
+    cout<<root->data<<" ";
+    inorder(root->right);
+} 
 info largestBSTinBT(Node* root){
     if(root == NULL){
         return {0,INT_MIN,INT_MAX,0,true};
@@ -47,11 +53,14 @@ info largestBSTinBT(Node* root){
     return curr;
 }
 
+
 int main(){
     struct Node* root = new Node(15);
-    root->left = new Node(20);
+    root->left = new Node(10);
     root->right = new Node(30);
     root->left->left = new Node(5);
     cout<<largestBSTinBT(root).ans;
+    inorder(root);
     return 0;   
+
 }
