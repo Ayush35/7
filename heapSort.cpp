@@ -36,11 +36,10 @@ void heapsort(vector<int> &a){
 int main(void)
 {
     int n = 10;
-    vector<int> a;
-    //  = {11,2,9,13,57,25,17,1,90,3};
-    for(int i = 0; i < n; i++){
-        cin>>a[i];
-    }
+    vector<int> a = {11,2,9,13,57,25,17,1,90,3};
+    // for(int i = 0; i < n; i++){
+    //     cin>>a[i];
+    // }
     heapsort(a);
     for(int i= 0; i <n ; i++){
         cout<<a[i]<<" ";
